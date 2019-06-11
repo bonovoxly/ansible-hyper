@@ -1,0 +1,6 @@
+---
+hyper_arch: "amd64"
+hyper_version: "3.0.2"
+hyper_rhel_url: "https://github.com/zeit/hyper/releases/download/{{ hyper_version }}/{{ hyper_rhel_file }}"
+hyper_rhel_checksum: "sha256:f88c579ca2e3c19fde9564e83a1d72f33b6c8fa1ab33e2fc0c602477e2852037"
+hyper_rhel_file: "hyper-{{ hyper_version }}.{{ hyper_arch }}.rpm"
