@@ -5,7 +5,7 @@
     suffix: hyper
   register: hyper_tmp
 
-- name: Download Hyper .deb package
+- name: Download Hyper .rpm package
   get_url:
     url: "{{ hyper_rhel_url }}"
     dest: "{{ hyper_tmp.path }}/{{ hyper_rhel_file }}"

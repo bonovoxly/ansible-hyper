@@ -11,6 +11,5 @@
         - "{{ ansible_os_family }}_{{ ansible_architecture }}.yml"
       paths: vars
 
-- name: Debian-based system
-  include_tasks: Debian.yml
-  when: ansible_os_family == 'Debian'
+- name: Run tasks for {{ ansible_os_family }}-based system
+  include_tasks: "{{ ansible_os_family }}.yml"
