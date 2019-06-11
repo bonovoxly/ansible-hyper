@@ -1,5 +1,8 @@
 ---
 # tasks file for markosamuli.hyper
+- name: Debug variables.
+  debug:
+    msg: "{{ ansible_os_family }}_{{ ansible_architecture }}.yml"
 
 - name: Load variables for the target system
   include_vars: "{{ item }}"
