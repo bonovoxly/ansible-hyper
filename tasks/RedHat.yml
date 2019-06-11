@@ -11,8 +11,13 @@
     dest: "{{ hyper_tmp.path }}/{{ hyper_rhel_file }}"
     checksum: "{{ hyper_rhel_checksum }}"
 
-- name: Install Hyper .rpm package
-  dnf:
+# - name: Install Hyper .rpm package (we could replace this with dnf, but that requires installing python-dnf)
+#   shell:
+#     cmd: |
+#       yum install -y {{ hyper_tmp.path }}/{{ hyper_rhel_file }}
+
+- name: Install Hyper .rpm
+  yum:
     name: "{{ hyper_tmp.path }}/{{ hyper_rhel_file }}"
     state: present
 
